@@ -3,12 +3,12 @@
     <head>
         <title>Welcome</title>
         <link rel="icon" type="image/x-icon" href="/code files/images/midra.ico">
-        <meta charset="utg-8">
+        <meta charset="utf-8">
     </head>
     <body> 
-        <h1>Welocome Student</h1>
+        <h1 style="width: 200px; margin:auto;">Welcome Student</h1><br>
     
-        <div style="width: 200px";margin:auto; class="Form-container">
+        <div style="width: 200px; margin:auto;" class="Form-container">
         <form id="regform" novalidate>
             <label for="fname">First name:</label><br>
             <input type="text" id="fname" name="fname"><br>
@@ -23,15 +23,25 @@
             <label for="prog">Programme:</label><br>
             <input type="text" id="prog" name="prog"><br>
 
-                <fieldset> 
-                    <legend>Your Interests</legend>
-                    <ul id="interests-list">
-                        <li><input type="text" name="interests[]" placeholder="e.g coding"</li>
-                        <li><input type="text" name="interests[]" </li>
-                        <li><input type="text" name="interests[]" </li>
-                    </ul>
+              <fieldset><legend>Your Interests</legend>
+                <ul id="interests-list">
+                    <li>
+                     <label for="interest1">Interest 1:</label>
+                     <input type="text" id="interest1" name="interests[]" placeholder="e.g., coding">
+                    </li>
 
+                    <li>
+                     <label for="interest2">Interest 2:</label>
+                     <input type="text" id="interest2" name="interests[]" placeholder="e.g gaming">
+                    </li>
+
+                    <li>
+                     <label for="interest3">Interest 3:</label>
+                     <input type="text" id="interest3" name="interests[]" placeholder="e.g.Studying">
+                     </li>
+                </ul>
                 </fieldset>
+
 
                 <label for="photo">Profile photo</label><br>
                 <input type="file" id="photo" name="photo" accept="image/*" > <br>
@@ -40,11 +50,11 @@
                 <legend>Year of Study<span aria-hidden="true">*</span></legend>
 
                 <label>
-                    <input type="radio" name="year" value="1">
+                    <input type="radio" name="year" value="1" required>
                     Year 1
                 </label>
                 <label>
-                    <input type="radio" name="year" value="2">
+                    <input type="radio" name="year" value="2" required>
                     Year 2
                 </label>
             </fieldset>
@@ -56,5 +66,28 @@
 
             </div>
 
-        <body>
+            <div id="cards-container">
+                <!--the generated profile cards will be stored here--> 
+            </div>
+
+               <h2>Summary Table</h2>
+               <table id="summary-table" border="1">
+                  <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last name</th>
+                        <th>Email</th>
+                        <th>Programme</th>
+                        <th>Interests</th>
+                        <th>Photo</th>
+                        <th>Year of Study</th>
+                        
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!--Rows will be inserted here -->
+                  </tbody>
+               </table>
+
+        </body>
 </html>
