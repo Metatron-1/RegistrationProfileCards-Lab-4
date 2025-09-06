@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Welcome</title>
+        <link rel="icon" type="image/x-icon" href="/code files/images/midra.ico">
+        <meta charset="utg-8">
+    </head>
+    <body> 
+        <h1>Welocome Student</h1>
+    
+        <div style="width: 200px";margin:auto; class="Form-container">
+        <form id="regform" novalidate>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+
+            <label for="email">Email:<span aria-hidden="true">*</span></label><br>
+            <input type="email" id="email" name="email" placeholder="e.g.maliketh@gmail.com" required/>
+            <small class="error" id="err-email"></small>
+
+            <label for="prog">Programme:</label><br>
+            <input type="text" id="prog" name="prog"><br>
+
+                <fieldset> 
+                    <legend>Your Interests</legend>
+                    <ul id="interests-list">
+                        <li><input type="text" name="interests[]" placeholder="e.g coding"</li>
+                        <li><input type="text" name="interests[]" </li>
+                        <li><input type="text" name="interests[]" </li>
+                    </ul>
+
+                </fieldset>
+
+                <label for="photo">Profile photo</label><br>
+                <input type="file" id="photo" name="photo" accept="image/*" > <br>
+            
+            <fieldset>
+                <legend>Year of Study<span aria-hidden="true">*</span></legend>
+
+                <label>
+                    <input type="radio" name="year" value="1">
+                    Year 1
+                </label>
+                <label>
+                    <input type="radio" name="year" value="2">
+                    Year 2
+                </label>
+            </fieldset>
+            
+            <button type="submit">Add Student</button>
+            <button type="reset">clear</button>
+        </form>
+        
+
+            </div>
+
+        <body>
+</html>
